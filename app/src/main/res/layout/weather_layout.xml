@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#00ff00"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <TextView
+        android:id="@+id/city_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="CityName"
+        android:textColor="@color/colorAccent"
+        android:textSize="36sp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <TextView
+        android:id="@+id/publish_text"
+        android:textSize="24sp"
+        android:text="PublishText"
+        app:layout_constraintTop_toBottomOf="@+id/city_name"
+        android:layout_marginTop="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/current_date"
+        android:text="CurrentDate"
+        android:textSize="24sp"
+        app:layout_constraintTop_toBottomOf="@id/publish_text"
+        android:layout_marginTop="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+
+    <TextView
+        android:id="@+id/weather_desp"
+        app:layout_constraintTop_toBottomOf="@id/current_date"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:text="weather_desp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/temp1"
+        android:text="temp1"
+        android:layout_marginTop="40dp"
+        app:layout_constraintTop_toBottomOf="@id/weather_desp"
+        app:layout_constraintEnd_toStartOf="@id/bolangxian"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:id="@+id/bolangxian"
+        android:text="~"
+        android:layout_marginTop="40dp"
+
+        app:layout_constraintTop_toBottomOf="@id/weather_desp"
+        app:layout_constraintStart_toEndOf="@id/temp1"
+        app:layout_constraintEnd_toStartOf="@id/temp2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:id="@+id/temp2"
+        android:text="temp2"
+        android:layout_marginTop="40dp"
+
+        app:layout_constraintTop_toBottomOf="@id/weather_desp"
+        app:layout_constraintStart_toEndOf="@id/bolangxian"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:id="@+id/switchCity"
+        android:text="switchCity"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <Button
+        android:id="@+id/refreshWeather"
+        android:text="refreshWeather"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+</android.support.constraint.ConstraintLayout>
