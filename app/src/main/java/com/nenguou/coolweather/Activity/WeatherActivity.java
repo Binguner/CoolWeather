@@ -16,11 +16,14 @@ import android.widget.Button;
 import android.widget.TextView;
 
 import com.nenguou.coolweather.R;
+import com.nenguou.coolweather.Service.AutoUpdateService;
 import com.nenguou.coolweather.Util.HttpCallbackListener;
 import com.nenguou.coolweather.Util.HttpUtil;
 import com.nenguou.coolweather.Util.Utility;
 
 import org.w3c.dom.Text;
+
+import java.security.AuthProvider;
 
 /**
  * Created by binguner on 2018/2/12.
@@ -84,7 +87,8 @@ public class WeatherActivity extends AppCompatActivity {
         weatherDespText.setText(sharedPreferences.getString("weather_desp",""));
         publishText.setText("今天" + sharedPreferences.getString("publish_time","") + " 发布" );
         currentDataText.setText(sharedPreferences.getString("current_date"," "));
-
+        Intent intent = new Intent(this, AutoUpdateService.class);
+        startService(intent);
     }
 
     private void queryWeatherCode(String countyCode) {
